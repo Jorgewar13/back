@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Usuario - Symfony 6 Login{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="text-center">Editar Usuario</h1>
+                </div>
+                <div class="card-body">
+                    {{ include('user/_form.html.twig', {'button_label': 'Actualizar'}) }}
+                    <a href="{{ path('app_user_index') }}" class="btn btn-secondary mt-3">Volver al listado</a>
+                    {{ include('user/_delete_form.html.twig') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
